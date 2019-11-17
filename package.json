@@ -1,0 +1,30 @@
+{
+  "name": "webpack-demo",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode production",
+    "start": "webpack-dev-server --mode development --open",
+    "compile:sass": "node-sass dist/sass/main.scss dist/css/style.css -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "babel-loader": "^8.0.6",
+    "node-sass": "^4.12.0",
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.7",
+    "webpack-dev-server": "^3.8.0"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.6.0",
+    "alpha2-countries": "^1.1.0",
+    "lodash": "^4.17.15"
+  }
+}

@@ -1,0 +1,115 @@
+.search{
+    
+    grid-column: col-start 2 / col-end 5;
+    margin: 7rem 0;
+    display: grid;
+    grid-template-columns: minmax(min-content, 600px);
+    justify-content: center;
+    @media only screen and (max-width:500px){
+
+        grid-column: full-start / full-end;
+        display: grid;
+        width: 94%
+     }
+  
+
+     &__header{
+        text-align: center;
+     }
+
+    &__content{
+        display: grid;
+        justify-items: center;
+        grid-template-rows: 1fr 1fr;
+        height:21rem;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 2rem 5rem rgba(0,0,0,.3);
+        position: relative;
+        z-index: 2;
+        &::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #23448638;
+            clip-path: polygon(100% 0, 100% 102%, 0 100%, 50% 53%);
+            border-radius: 10px;
+            z-index: -1;
+
+        }
+    }
+
+    &__header{
+        h1{
+            letter-spacing: 1px;
+            margin-top: 3rem;
+            color: #091834;
+            text-transform: uppercase;
+            font-size: 2.49rem;
+            border-bottom: 2px solid #091834;
+            border-top: 2px solid #091834;
+            padding: 0.5rem 0;
+        }
+    }
+
+    &__form{
+        display: grid;
+        align-items: start;
+        justify-items: center;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+
+    &__field{
+        width: 404px;
+        @media only screen and (max-width:500px){
+
+            width: 150%;
+        }
+        @media only screen and (max-width:400px){
+
+            width: 130%;
+        }
+        height: 40px;
+        background: none;
+        border: 2px solid #091834;
+        border-radius: 18px;
+        padding: 15px;
+        outline: none;
+        font-size: 1.8rem;
+        color: #091834;
+        transition: all 0.3s ease-in-out;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+      
+        &:focus{
+            box-shadow: 0px 0px 6px #0e2858b8;
+            border-width: 3px 
+        }
+    }
+    &__btn{
+        width: 142px;
+        padding: 8px 0;
+        background: #091834;
+        border: 1px solid #fff;
+        border-radius: 16px;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        font-weight: bold;
+        letter-spacing: 1px;
+        transition: all 0.2s ease-in-out;
+        outline: none;
+        cursor: pointer;
+        &:hover{
+            background: #fff;
+            border: 1px solid #091834;
+            color: #091834;
+            transform: translateY(-4px);
+            box-shadow: 0 .8rem 6rem rgba(0,0,0,.3);
+        }
+    }
+}

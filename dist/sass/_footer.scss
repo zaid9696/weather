@@ -1,0 +1,47 @@
+.footer{
+
+    
+    grid-column: full-start / full-end;
+    display: grid;
+    align-content: end;
+    width: 100%;
+   
+    &__container{
+        background-color: $footer-color;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: end;
+        align-items: center;
+        padding: 12px 25px;
+        width: 100%;
+    }
+
+
+    &__logo{
+        width:80px;
+    }
+
+    .copyrigt{
+        justify-self: start;
+        color: #ddd;
+        font-size: 1.1rem;
+
+        .zaid{
+            letter-spacing: 1px;
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: white;
+        }
+    }
+
+    .powred{
+        display: flex;
+        align-items: center;
+        p{
+            color: #ddd;
+            font-size: 1.3rem;
+            padding-right: 7px;
+            margin-top: 8px;
+        }
+    }
+}
